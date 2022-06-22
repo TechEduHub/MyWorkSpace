@@ -12,15 +12,14 @@ public class LoginPage extends AutomationBase{
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="//input[@name='identity']") 
+	public static WebElement uname;
 	
-	@FindBy(xpath="//input[@id='user-name' and @name='user-name']") 
-	WebElement uname;
+	@FindBy(xpath="//input[@name='password']") 
+	public static WebElement pwd;
 	
-	@FindBy(xpath="//input[@id='password' and @name='password']") 
-	WebElement pwd;
-	
-	@FindBy(xpath="//input[@id='login-button' and @name='login-button']")
-	WebElement login;
+	@FindBy(xpath="//input[@name='submit']")
+	public static WebElement login;
 	
 	@FindBy(xpath="//h3[contains(.,'Epic sadface: Username is required')]")
 	WebElement emptyErrorMsg;
@@ -32,7 +31,7 @@ public class LoginPage extends AutomationBase{
 	WebElement productTitle;
 	
 	
-	public void typeUsername( String email) {
+	public void typeUsername(String email) {
 		uname.sendKeys(email);
 	}
 	public void typePassword(String password) {
