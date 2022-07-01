@@ -17,7 +17,7 @@ public class AutomationBase {
 	WebActionHelpers webAction = new WebActionHelpers();
 	PropertyDataHandler prop = new PropertyDataHandler();
 
-	public void launchBrowser(String browserName) throws AutomationException {
+	public WebDriver launchBrowser(String browserName) throws AutomationException {
 		switch (browserName) {
 		case "chrome":
 			launchChromeBrowser();
@@ -31,15 +31,18 @@ public class AutomationBase {
 			System.out.println(AutomationConstants.CHECKBROWSER_MESSAGE);
 			break;
 		}
+		return driver;
 	}
 
-	private void launchChromeBrowser() throws AutomationException {
+	private WebDriver launchChromeBrowser() throws AutomationException {
 		try {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			Properties allProp = prop.readPropertiesFile("config.properties");
 			webAction.navigateToBrowser(driver, allProp.getProperty("url"));
+			return driver;
+			
 		} catch (Exception e) {
 			throw new AutomationException(e.getMessage(), e);
 		}

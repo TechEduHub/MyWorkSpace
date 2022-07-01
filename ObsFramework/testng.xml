@@ -5,7 +5,8 @@
    <parameter name="browserType" value="chrome"></parameter>
    
    <classes>
-      <class name="com.obs.tests.LoginTest"/>
+      <class name="com.demo.tests.DemoLoginTest"/>
+      <class name="com.demo.tests.HomepageTest"/>
     </classes>
   </test> <!-- Test -->  
 </suite> <!-- Suite -->
