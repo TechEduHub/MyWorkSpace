@@ -25,8 +25,9 @@ public class HomepageTest extends AutomationBase{
 	public void setup(String browserType) throws AutomationException {
 		driver = launchBrowser(browserType);
 		loginpg = new DemoLoginPage(driver);
-		loginpg.login("standard_user", "secret_sauce");
-		homepg = new Homepage(driver);
+		homepg = loginpg.login("standard_user", "secret_sauce");
+		//homepg = new Homepage(driver);
+		
 	}
 
 	@Test

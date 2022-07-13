@@ -14,10 +14,10 @@ public class DemoLoginPage {
 		PageFactory.initElements(driver, this);				
 	}
 	@FindBy(name="user-name")
-	WebElement username;
+	private WebElement username;
 	
 	@FindBy(name="password")
-	WebElement password;
+	private WebElement password;
 	
 	@FindBy(id="login-button")
 	WebElement loginBtn;

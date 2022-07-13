@@ -1,5 +1,6 @@
 package com.obs.actions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,18 @@ public class ClickActionHelpers {
 		act = new Actions(driver);
 		try {
 			act.moveToElement(dragableButton).click().build().perform();
+		}
+		catch (Exception e) {
+
+			System.out.println("Exceptiom occured" +e);
+			// TODO: handle exception
+		}
+	}
+	public void mouseClick(WebDriver driver , String dragableButton)
+	{
+		act = new Actions(driver);
+		try {
+			act.moveToElement(driver.findElement(By.xpath(dragableButton))).click().build().perform();
 		}
 		catch (Exception e) {
 

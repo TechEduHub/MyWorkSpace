@@ -48,6 +48,9 @@ public class AutomationBase {
 		}
 	}
 
+	public static WebDriver getDriver() {
+		return driver;
+	}
 	/*
 	 * public void launchChromeBrowser(String browserType) throws Exception { try {
 	 * if(browserType.equalsIgnoreCase("chrome")) {

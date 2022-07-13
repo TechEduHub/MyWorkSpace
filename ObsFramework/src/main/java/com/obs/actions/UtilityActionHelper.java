@@ -3,6 +3,7 @@ package com.obs.actions;
 import java.io.File;
 import java.util.List;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -112,8 +113,10 @@ public class UtilityActionHelper {
 	 */
 	public void capturePageScreenshot(WebDriver driver) throws Exception {
 		try {
+			String random = RandomStringUtils.randomAlphanumeric(10);
+			String fileNm = "FailedSS "+ random;
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileHandler.copy(src, new File("PageScreenshot.png"));
+			FileHandler.copy(src, new File(fileNm+".png"));
 		}catch (Exception e) {
 			throw new Exception("capturePageScreenshot (UtilityActionHelper) : "+e.getMessage());
 		}
