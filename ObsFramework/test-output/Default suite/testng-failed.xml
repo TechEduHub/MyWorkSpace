@@ -5,10 +5,13 @@
     <classes>
       <class name="com.obs.tests.LoginTest">
         <methods>
-          <include name="verifyInValidLogin"/>
+          <include name="verifyTitle"/>
+          <include name="verifyValidLogin"/>
+          <include name="verifyUrl"/>
           <include name="quitBrowser"/>
+          <include name="isLoginFieldsDisplayed"/>
+          <include name="verifyCafetriaName"/>
           <include name="launch"/>
-          <include name="verifyEmptyLogin"/>
         </methods>
       </class> <!-- com.obs.tests.LoginTest -->
     </classes>

@@ -9,15 +9,43 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">ChromeTest</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">33,556</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ChromeTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">54,107</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.demo.tests.DemoLoginTest</td><td><a href="#m0">validateEmptyCredentialsErrorMessage</a></td><td rowspan="1">1656697215316</td><td rowspan="1">462</td></tr><tr class="passedeven"><td><a href="#m1">validateInvalidCredentialsErrorMessage</a></td><td rowspan="1">1656697219749</td><td rowspan="1">472</td></tr><tr class="passedeven"><td><a href="#m2">validateInvalidPasswordErrorMessage</a></td><td rowspan="1">1656697210302</td><td rowspan="1">370</td></tr><tr class="passedeven"><td><a href="#m3">validateInvalidUsernameErrorMessage</a></td><td rowspan="1">1656697204792</td><td rowspan="1">458</td></tr><tr class="passedeven"><td><a href="#m4">validateSuccessfulLogin</a></td><td rowspan="1">1656697224324</td><td rowspan="1">569</td></tr><tr class="passedodd"><td rowspan="1">com.demo.tests.HomepageTest</td><td><a href="#m5">validateProductsPage</a></td><td rowspan="1">1656697230131</td><td rowspan="1">187</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.demo.tests.DemoLoginTest</td><td><a href="#m0">setup</a></td><td rowspan="1">1658243898866</td><td rowspan="1">5821</td></tr><tr><th colspan="4">ChromeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.demo.tests.DemoLoginTest</td><td><a href="#m1">validateInvalidUsernameErrorMessage</a></td><td rowspan="1">1658243897782</td><td rowspan="1">406</td></tr><tr><th colspan="4">ChromeTest &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.demo.tests.DemoLoginTest</td><td><a href="#m2">quitBrowser</a></td><td rowspan="1">1658243904711</td><td rowspan="1">-1658243904711</td></tr><tr><th colspan="4">ChromeTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.demo.tests.DemoLoginTest</td><td><a href="#m3">validateInvalidPasswordErrorMessage</a></td><td rowspan="1">1658243904698</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>ChromeTest</h2><h3 id="m0">com.demo.tests.DemoLoginTest#validateEmptyCredentialsErrorMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.demo.tests.DemoLoginTest#validateInvalidCredentialsErrorMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.demo.tests.DemoLoginTest#validateInvalidPasswordErrorMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.demo.tests.DemoLoginTest#validateInvalidUsernameErrorMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.demo.tests.DemoLoginTest#validateSuccessfulLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.demo.tests.HomepageTest#validateProductsPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ChromeTest</h2><h3 id="m0">com.demo.tests.DemoLoginTest#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.obs.exception.AutomationException: Cannot navigate to invalid URL, please specify valid URL
+	at com.obs.base.AutomationBase.launchChromeBrowser(AutomationBase.java:47)
+	at com.obs.base.AutomationBase.launchBrowser(AutomationBase.java:23)
+	at com.demo.tests.DemoLoginTest.setup(DemoLoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.obs.exception.AutomationException: Cannot navigate to invalid URL, please specify valid URL
+	at com.obs.actions.WebActionHelpers.navigateToBrowser(WebActionHelpers.java:27)
+	at com.obs.base.AutomationBase.launchChromeBrowser(AutomationBase.java:43)
+	... 34 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.demo.tests.DemoLoginTest#validateInvalidUsernameErrorMessage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: checkElementDisplayed (ValidationActionHelper) : no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h3[text()=&apos;Epic sadface: Username is required&apos;]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;RVSKCH542LT&apos;, ip: &apos;192.168.255.223&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3ce275134d189d4bcf80b52497adce9e, findElement {using=xpath, value=//h3[text()=&apos;Epic sadface: Username is required&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:60858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60858/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ce275134d189d4bcf80b52497adce9e
+	at com.obs.actions.ValidationActionHelpers.isElementVisible(ValidationActionHelpers.java:19)
+	at com.demo.tests.DemoLoginTest.validateInvalidUsernameErrorMessage(DemoLoginTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.demo.tests.DemoLoginTest#quitBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.demo.tests.DemoLoginTest#validateInvalidPasswordErrorMessage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.obs.exception.AutomationException: Cannot navigate to invalid URL, please specify valid URL
+	at com.obs.base.AutomationBase.launchChromeBrowser(AutomationBase.java:47)
+	at com.obs.base.AutomationBase.launchBrowser(AutomationBase.java:23)
+	at com.demo.tests.DemoLoginTest.setup(DemoLoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.obs.exception.AutomationException: Cannot navigate to invalid URL, please specify valid URL
+	at com.obs.actions.WebActionHelpers.navigateToBrowser(WebActionHelpers.java:27)
+	at com.obs.base.AutomationBase.launchChromeBrowser(AutomationBase.java:43)
+	... 34 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

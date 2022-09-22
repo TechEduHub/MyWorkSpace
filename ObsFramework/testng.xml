@@ -8,7 +8,14 @@
 		<parameter name="browserType" value="chrome"></parameter>
 		<classes>
 			<class name="com.demo.tests.DemoLoginTest" />
-			<class name="com.demo.tests.HomepageTest" />
+			<!--<class name="com.demo.tests.HomepageTest" /> -->
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="FirefoxTest">
+		<parameter name="browserType" value="firefox"></parameter>
+		<classes>
+			<class name="com.demo.tests.DemoLoginTest" />
+			<!--<class name="com.demo.tests.HomepageTest" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
